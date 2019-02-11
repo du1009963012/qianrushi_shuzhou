@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+    <TextView
+        android:text="已配对设备"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/binded_blueDevice_list"
+        android:layout_width="match_parent"
+        android:layout_height="155dp" />
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:text="附近设备"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/bind_blueDevice_list"
+        android:layout_width="match_parent"
+        android:layout_height="223dp" />
+
+    <Button
+        android:id="@+id/updata_drvice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="5dp"
+        android:text="重新搜索" />
+</LinearLayout>

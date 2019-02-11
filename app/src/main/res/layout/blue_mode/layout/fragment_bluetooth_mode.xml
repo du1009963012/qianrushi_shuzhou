@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bluetooth_mode.bluetooth_mode">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/data_chuangkou1"
+        android:layout_width="match_parent"
+        android:layout_height="333dp"
+        android:orientation="horizontal"
+        android:background="#fba"
+        android:padding="1dp">
+
+        <ScrollView
+            android:layout_width="458dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:padding="2dp">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/jinzhi_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    android:text="16进制" />
+
+                <Switch
+                    android:id="@+id/jinzhi_switch"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/jinzhi_16"
+                    android:padding="1dp" />
+
+                <Button
+                    android:id="@+id/qingkong_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jinzhi_16"
+                    android:padding="2dp"
+                    android:text="清空接收区域" />
+                <TextView
+                    android:layout_below="@id/qingkong_button"
+                    android:id="@+id/hinted"
+                    android:text="主从设置，默认为客户端模式（从机模式）"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Switch
+                    android:layout_below="@id/hinted"
+                    android:textOff="客户端模式"
+                    android:textOn="服务器模式"
+                    android:id="@+id/sever_or_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/data_jiehsou"
+            android:singleLine="false"
+            android:scrollHorizontally="false"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideInset"
+            android:gravity="bottom"
+            android:maxLines="200"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/data_chuangkou2"
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:layout_below="@id/data_chuangkou1"
+        android:layout_alignParentStart="true"
+
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/jinzhi_16_fasong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/dingshi_fasong_switch"
+
+
+                    android:padding="5dp"
+                    android:text="16进制" />
+
+                <Switch
+                    android:id="@+id/send_data_hex"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/jinzhi_16_fasong"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/dingshi_fasong_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jinzhi_16_fasong"
+                    android:layout_alignParentStart="true"
+
+
+                    android:padding="5dp"
+                    android:text="定时发送" />
+
+                <Switch
+                    android:id="@+id/dingshi_fasong_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/send_data_hex"
+                    android:layout_marginLeft="-3dp"
+                    android:layout_marginTop="-1dp"
+                    android:layout_toRightOf="@id/dingshi_fasong_label"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/time_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_below="@id/dingshi_fasong_switch"
+                    android:hint="设置定时时间ms" />
+
+                <Button
+                    android:id="@+id/send_data_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_setting"
+                    android:padding="5dp"
+                    android:text="发送" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/fasong_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/data_chuangkou2"
+            android:inputType="textImeMultiLine" />
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/blue_switch"
+        android:src="@drawable/blue_log"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

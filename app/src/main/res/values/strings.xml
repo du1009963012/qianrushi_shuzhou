@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">嵌入式助手</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">杜智文</string>
+    <string name="nav_header_subtitle">1009963012@qq.com</string>
+    <string name="nav_header_desc">Navigation头</string>
+    <string name="action_settings">设置</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sensor_mode_title">检测到一下传感器：</string>
+</resources>
